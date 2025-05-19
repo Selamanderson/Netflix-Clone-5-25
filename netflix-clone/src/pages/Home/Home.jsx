@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer/Footer";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/footer";
 import Banner from "../../components/Banner/Banner";
 import RowList from "../../components/Rows/RowList/RowList";
 
 function Home() {
   return (
     <>
-      <Header />
+      <Header /> 
       <Banner />
       <RowList />
       <Footer />
