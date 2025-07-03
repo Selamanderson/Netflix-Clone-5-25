@@ -14,7 +14,7 @@ useEffect(()=>{
             const request=await axios.get(fetchUrl)
             setMovie(request.data.results)
         }catch(error){
-            console.log("error",error)
+            console.error("error",error)
         }
     })()
 },[fetchUrl])
@@ -24,8 +24,7 @@ const handleClick=(movie)=> {
     }else{
         movieTrailer(movie?.title ||movie?.name||movie?.original_name) 
         .then((url)=>{
-            console.log(url)
-            const urlParams=new URLSearchParams(new URL(url).search)
+                    const urlParams=new URLSearchParams(new URL(url).search)
             setTrailerUrl(urlParams.get('v'))
         })
     }
