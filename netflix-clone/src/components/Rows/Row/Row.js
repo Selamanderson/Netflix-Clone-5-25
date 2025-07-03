@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./row.css"
 import axios from "../../../utils/Axios"
-import movieTrailer from 'movie-trailer'
+import movieTrailer from "movie-trailer";
 import YouTube from 'react-youtube'
 
 const Row = ({title,fetchUrl,isLargeRow}) => {
@@ -22,7 +22,7 @@ const handleClick=(movie)=> {
     if(trailerUrl){
         setTrailerUrl('')
     }else{
-        movieTrailer(movie?.title ||movie?.name||movie?.original_name)
+        movieTrailer(movie?.title ||movie?.name||movie?.original_name) 
         .then((url)=>{
             console.log(url)
             const urlParams=new URLSearchParams(new URL(url).search)
@@ -38,7 +38,7 @@ const opts={
     }
 }
   return (
-    <div className='row'>
+    <div className="row">
         <h1>{title}</h1>
         <div className="row_posters">
             {movies?.map((movie,index)=>(
